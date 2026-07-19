@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="An interactive educational web application about life in Kamakura-period Japan and the Mongol invasions.">
+    <title>Kamakura Under Siege</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <a class="brand nav-link" href="#home" data-page="home" aria-label="Go to home page">
+            <span class="brand-mark" aria-hidden="true">鎌</span>
+            <span>
+                <strong>Kamakura</strong>
+                <small>Under Siege</small>
+            </span>
+        </a>
+
+        <button class="menu-button" id="menu-button" type="button"
+            aria-label="Open navigation menu" aria-controls="main-navigation" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav class="main-navigation" id="main-navigation" aria-label="Main navigation">
+            <button class="nav-link active-nav" type="button" data-page="home">Home</button>
+            <button class="nav-link" type="button" data-page="kamakura-life">Kamakura Life</button>
+            <button class="nav-link" type="button" data-page="mongol-invasions">Mongol Invasions</button>
+            <button class="nav-link" type="button" data-page="life-during">Life During War</button>
+            <button class="nav-link game-nav" type="button" data-page="mini-game">Mini-Game</button>
+        </nav>
+    </header>
+
+    <main id="app">
+        <!-- HOME PAGE -->
+        <section class="page active-page" id="home" aria-labelledby="home-title">
+            <div class="hero">
+                <div class="hero-content">
+                    <p class="eyebrow">Japan · 1185–1333</p>
+                    <h1 id="home-title">Kamakura <span>Under Siege</span></h1>
+                    <p class="hero-summary">
+                        Step into Kamakura-period Japan. Explore its warrior government,
+                        compare the Mongol invasions of 1274 and 1281, and discover how
+                        ordinary lives changed under the threat of war.
+                    </p>
+                    <div class="hero-actions">
+                        <button class="primary-button nav-link" type="button" data-page="kamakura-life">
+                            Begin Exploring
+                        </button>
+                        <button class="secondary-button nav-link" type="button" data-page="mini-game">
+                            Play the Mini-Game
+                        </button>
+                    </div>
+                </div>
+
+                <div class="hero-art" aria-label="Stylised moonlit Japanese fortress">
+                    <div class="moon"></div>
+                    <div class="mountain mountain-one"></div>
+                    <div class="mountain mountain-two"></div>
+                    <div class="castle">
+                        <span class="roof roof-one"></span>
+                        <span class="roof roof-two"></span>
+                        <span class="tower"></span>
+                    </div>
+                    <div class="mist mist-one"></div>
+                    <div class="mist mist-two"></div>
+                </div>
+            </div>
+
+            <section class="overview-section" aria-labelledby="explore-title">
+                <div class="section-heading">
+                    <p class="eyebrow">Choose a path</p>
+                    <h2 id="explore-title">What will you discover?</h2>
+                </div>
+
+                <div class="topic-grid" id="topic-grid">
+                    <article class="topic-card" tabindex="0" data-page="kamakura-life">
+                        <span class="topic-number">01</span>
+                        <h3>Life in Kamakura Japan</h3>
+                        <p>Meet the groups that shaped a new age of warrior government.</p>
+                        <span class="card-link">Explore society →</span>
+                    </article>
+
+                    <article class="topic-card" tabindex="0" data-page="mongol-invasions">
+                        <span class="topic-number">02</span>
+                        <h3>The Mongol Invasions</h3>
+                        <p>Compare the attacks of 1274 and 1281 and Japan's response.</p>
+                        <span class="card-link">Study the invasions →</span>
+                    </article>
+
+                    <article class="topic-card" tabindex="0" data-page="life-during">
+                        <span class="topic-number">03</span>
+                        <h3>Life During the Invasions</h3>
+                        <p>See how defence preparations affected warriors, workers and religion.</p>
+                        <span class="card-link">Meet the people →</span>
+                    </article>
+                </div>
+            </section>
+
+            <section class="quick-timeline" aria-labelledby="timeline-title">
+                <div class="section-heading">
+                    <p class="eyebrow">Historical overview</p>
+                    <h2 id="timeline-title">Four turning points</h2>
+                </div>
+                <div class="timeline-row">
+                    <article>
+                        <strong>1185</strong>
+                        <p>Warrior rule begins to replace court-centred government.</p>
+                    </article>
+                    <article>
+                        <strong>1192</strong>
+                        <p>Minamoto no Yoritomo becomes shogun.</p>
+                    </article>
+                    <article>
+                        <strong>1274</strong>
+                        <p>The first Mongol invasion reaches Hakata Bay.</p>
+                    </article>
+                    <article>
+                        <strong>1281</strong>
+                        <p>A larger second invasion is repelled.</p>
+                    </article>
+                </div>
+            </section>
+
+            <aside class="qr-panel" aria-label="Desktop QR code">
+                <img src="images/qr-placeholder.png" alt="Placeholder QR code for the deployed website">
+                <div>
+                    <strong>Open on mobile</strong>
+                    <p>Replace this placeholder after publishing the final GitHub Pages URL.</p>
+                </div>
+            </aside>
+        </section>
+
+        <!-- MAIN TOPIC PAGE -->
+        <section class="page" id="kamakura-life" aria-labelledby="kamakura-title" hidden>
+            <div class="page-banner">
+                <div>
+                    <p class="eyebrow">Main Topic</p>
+                    <h1 id="kamakura-title">Life in Kamakura-Period Japan</h1>
+                    <p>
+                        The Kamakura period marked a major shift from court-centred rule
+                        toward a military government led by warriors.
+                    </p>
+                </div>
+                <div class="banner-symbol" aria-hidden="true">侍</div>
+            </div>
+
+            <section class="content-section split-layout">
+                <div>
+                    <p class="eyebrow">A changing government</p>
+                    <h2>Who held power?</h2>
+                    <p>
+                        The emperor and imperial court remained important symbols, but political
+                        and military authority increasingly rested with the shogunate. The shogun
+                        governed through warrior families, while the Hōjō clan later exercised
+                        great influence through the office of regent.
+                    </p>
+                    <p>
+                        Most people were not warriors. Farmers produced food and paid dues,
+                        artisans created necessary goods, merchants exchanged products, and
+                        religious communities shaped education, belief and public life.
+                    </p>
+                </div>
+
+                <div class="fact-panel">
+                    <span class="fact-label">Key idea</span>
+                    <strong>Military rule did not erase the imperial court.</strong>
+                    <p>
+                        Japan had overlapping centres of authority: the court in Kyoto and
+                        the warrior government in Kamakura.
+                    </p>
+                </div>
+            </section>
+
+            <section class="content-section" aria-labelledby="society-title">
+                <div class="section-heading">
+                    <p class="eyebrow">Interactive explorer</p>
+                    <h2 id="society-title">Explore Kamakura society</h2>
+                    <p>Select a group to update the information panel.</p>
+                </div>
+
+                <div class="explorer-layout">
+                    <div class="selector-list" id="society-selector" role="list">
+                        <button class="selector-button selected" type="button" data-group="warrior">
+                            <span>01</span> Warrior Government
+                        </button>
+                        <button class="selector-button" type="button" data-group="farmer">
+                            <span>02</span> Farmers
+                        </button>
+                        <button class="selector-button" type="button" data-group="artisan">
+                            <span>03</span> Artisans & Merchants
+                        </button>
+                        <button class="selector-button" type="button" data-group="religious">
+                            <span>04</span> Religious Communities
+                        </button>
+                        <button class="selector-button" type="button" data-group="court">
+                            <span>05</span> Imperial Court
+                        </button>
+                    </div>
+
+                    <article class="detail-panel" id="society-detail" aria-live="polite">
+                        <p class="detail-kicker" id="society-kicker">Government and protection</p>
+                        <h3 id="society-name">Warrior Government</h3>
+                        <p id="society-description">
+                            Samurai served powerful lords, protected estates and carried out
+                            military or administrative duties for the shogunate.
+                        </p>
+                        <div class="detail-facts">
+                            <div>
+                                <span>Primary role</span>
+                                <strong id="society-role">Defence and administration</strong>
+                            </div>
+                            <div>
+                                <span>Daily concern</span>
+                                <strong id="society-concern">Service, loyalty and land</strong>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <div class="section-heading">
+                    <p class="eyebrow">Check your understanding</p>
+                    <h2>Myth or fact?</h2>
+                </div>
+                <div class="reveal-grid">
+                    <button class="reveal-card" type="button">
+                        <span class="reveal-front">“Every person in Kamakura Japan was a samurai.”</span>
+                        <span class="reveal-back"><strong>Myth.</strong> Most people worked in farming, crafts, trade or religious life.</span>
+                    </button>
+                    <button class="reveal-card" type="button">
+                        <span class="reveal-front">“The emperor continued to exist during warrior rule.”</span>
+                        <span class="reveal-back"><strong>Fact.</strong> The imperial court remained, even as the shogunate gained power.</span>
+                    </button>
+                </div>
+            </section>
+
+            <div class="page-controls">
+                <button class="secondary-button nav-link" type="button" data-page="home">← Home</button>
+                <button class="primary-button nav-link" type="button" data-page="mongol-invasions">Next: Mongol Invasions →</button>
+            </div>
+        </section>
+
+        <!-- SUBTOPIC 1 PAGE -->
+        <section class="page" id="mongol-invasions" aria-labelledby="invasions-title" hidden>
+            <div class="page-banner invasion-banner">
+                <div>
+                    <p class="eyebrow">Subtopic 1</p>
+                    <h1 id="invasions-title">The Mongol Invasions of Japan</h1>
+                    <p>
+                        Kublai Khan's forces attacked in 1274 and 1281. Japan's defenders
+                        faced unfamiliar tactics, large fleets and enormous pressure.
+                    </p>
+                </div>
+                <div class="banner-symbol" aria-hidden="true">波</div>
+            </div>
+
+            <section class="content-section" aria-labelledby="compare-title">
+                <div class="section-heading">
+                    <p class="eyebrow">Interactive comparison</p>
+                    <h2 id="compare-title">1274 or 1281?</h2>
+                    <p>Switch between the two invasion attempts.</p>
+                </div>
+
+                <div class="year-tabs" role="tablist" aria-label="Choose an invasion year">
+                    <button class="year-tab active-year" type="button" data-year="1274" role="tab" aria-selected="true">1274</button>
+                    <button class="year-tab" type="button" data-year="1281" role="tab" aria-selected="false">1281</button>
+                </div>
+
+                <article class="invasion-card" id="invasion-card" aria-live="polite">
+                    <div class="invasion-year">
+                        <span>First invasion</span>
+                        <strong id="invasion-year">1274</strong>
+                    </div>
+                    <div class="invasion-details">
+                        <h3 id="invasion-name">The Bun'ei Campaign</h3>
+                        <p id="invasion-summary">
+                            The invading force attacked Tsushima and Iki before landing near
+                            Hakata Bay. Japanese defenders encountered coordinated formations,
+                            massed archery and gunpowder weapons.
+                        </p>
+                        <dl class="comparison-list">
+                            <div>
+                                <dt>Japanese preparation</dt>
+                                <dd id="invasion-preparation">Limited experience against a large overseas invasion</dd>
+                            </div>
+                            <div>
+                                <dt>Important development</dt>
+                                <dd id="invasion-development">The defenders learned how different the attackers' tactics were</dd>
+                            </div>
+                            <div>
+                                <dt>Outcome</dt>
+                                <dd id="invasion-outcome">The invading fleet withdrew after fighting and severe weather</dd>
+                            </div>
+                        </dl>
+                    </div>
+                </article>
+            </section>
+
+            <section class="content-section">
+                <div class="section-heading">
+                    <p class="eyebrow">Cause and response</p>
+                    <h2>From warning to invasion</h2>
+                </div>
+                <div class="event-timeline" id="event-timeline">
+                    <button type="button" data-event="1268">
+                        <strong>1268</strong>
+                        <span>First demand</span>
+                    </button>
+                    <button type="button" data-event="1274">
+                        <strong>1274</strong>
+                        <span>First invasion</span>
+                    </button>
+                    <button type="button" data-event="1275">
+                        <strong>1275+</strong>
+                        <span>Defences built</span>
+                    </button>
+                    <button type="button" data-event="1281">
+                        <strong>1281</strong>
+                        <span>Second invasion</span>
+                    </button>
+                </div>
+                <p class="timeline-explanation" id="timeline-explanation" aria-live="polite">
+                    Kublai Khan's government sent demands that Japan submit. The shogunate refused.
+                </p>
+            </section>
+
+            <section class="content-section split-layout">
+                <div>
+                    <p class="eyebrow">Beyond the storm</p>
+                    <h2>Victory had a cost</h2>
+                    <p>
+                        The storms became a powerful part of the invasions' memory, but Japanese
+                        resistance and preparations were also important. Defenders constructed
+                        fortifications, maintained readiness and fought from shore and small boats.
+                    </p>
+                </div>
+                <div class="fact-panel">
+                    <span class="fact-label">Think carefully</span>
+                    <strong>A defensive victory produced little captured land.</strong>
+                    <p>
+                        Without new territory or spoils, rewarding warriors became difficult,
+                        contributing to dissatisfaction with the shogunate.
+                    </p>
+                </div>
+            </section>
+
+            <div class="page-controls">
+                <button class="secondary-button nav-link" type="button" data-page="kamakura-life">← Kamakura Life</button>
+                <button class="primary-button nav-link" type="button" data-page="life-during">Next: Life During War →</button>
+            </div>
+        </section>
+
+        <!-- SUBTOPIC 2 PAGE -->
+        <section class="page" id="life-during" aria-labelledby="life-during-title" hidden>
+            <div class="page-banner life-banner">
+                <div>
+                    <p class="eyebrow">Subtopic 2</p>
+                    <h1 id="life-during-title">Life During the Mongol Invasions</h1>
+                    <p>
+                        The invasion threat affected more than battlefields. Defence required
+                        labour, supplies, religious activity and years of vigilance.
+                    </p>
+                </div>
+                <div class="banner-symbol" aria-hidden="true">民</div>
+            </div>
+
+            <section class="content-section" aria-labelledby="perspective-title">
+                <div class="section-heading">
+                    <p class="eyebrow">Choose a perspective</p>
+                    <h2 id="perspective-title">How did war change daily life?</h2>
+                    <p>Select a person to explore their possible responsibilities and concerns.</p>
+                </div>
+
+                <div class="perspective-buttons" id="perspective-buttons">
+                    <button class="perspective-button selected" type="button" data-person="samurai">Samurai Defender</button>
+                    <button class="perspective-button" type="button" data-person="farmer">Farmer</button>
+                    <button class="perspective-button" type="button" data-person="builder">Builder</button>
+                    <button class="perspective-button" type="button" data-person="monk">Monk</button>
+                </div>
+
+                <article class="perspective-panel" id="perspective-panel" aria-live="polite">
+                    <div class="portrait-symbol" id="person-symbol" aria-hidden="true">刀</div>
+                    <div>
+                        <p class="detail-kicker" id="person-label">Military service</p>
+                        <h3 id="person-name">Samurai Defender</h3>
+                        <p id="person-story">
+                            A warrior might be ordered to travel to Kyushu, remain ready for
+                            another attack and join coastal patrols or raids against enemy ships.
+                        </p>
+                        <ul id="person-list">
+                            <li>Leave home to serve at coastal defences</li>
+                            <li>Provide weapons, armour and attendants</li>
+                            <li>Seek recognition or rewards after service</li>
+                        </ul>
+                    </div>
+                </article>
+            </section>
+
+            <section class="content-section">
+                <div class="section-heading">
+                    <p class="eyebrow">Wider consequences</p>
+                    <h2>A war felt across society</h2>
+                </div>
+
+                <div class="impact-grid">
+                    <article>
+                        <span class="impact-icon" aria-hidden="true">築</span>
+                        <h3>Construction</h3>
+                        <p>Stone defences around Hakata Bay demanded materials, organisation and labour.</p>
+                    </article>
+                    <article>
+                        <span class="impact-icon" aria-hidden="true">米</span>
+                        <h3>Supplies</h3>
+                        <p>Warriors and workers required food while local communities still needed to survive.</p>
+                    </article>
+                    <article>
+                        <span class="impact-icon" aria-hidden="true">祈</span>
+                        <h3>Religion</h3>
+                        <p>Temples and shrines offered prayers and rituals for the country's protection.</p>
+                    </article>
+                    <article>
+                        <span class="impact-icon" aria-hidden="true">報</span>
+                        <h3>Rewards</h3>
+                        <p>A lack of conquered land made compensation difficult and increased warrior discontent.</p>
+                    </article>
+                </div>
+            </section>
+
+            <section class="content-section reflection-section">
+                <form id="reflection-form">
+                    <div>
+                        <p class="eyebrow">Use form data</p>
+                        <h2>Build your historical profile</h2>
+                        <p>Enter a name and choose the role you would most like to study.</p>
+                    </div>
+                    <label>
+                        Display name
+                        <input id="student-name" name="studentName" type="text" maxlength="20"
+                            placeholder="e.g. Adrian" required>
+                    </label>
+                    <label>
+                        Historical role
+                        <select id="chosen-role" name="chosenRole">
+                            <option value="Samurai Defender">Samurai Defender</option>
+                            <option value="Farmer">Farmer</option>
+                            <option value="Fortification Builder">Fortification Builder</option>
+                            <option value="Buddhist Monk">Buddhist Monk</option>
+                        </select>
+                    </label>
+                    <button class="primary-button" type="submit">Create Profile</button>
+                </form>
+                <p class="profile-result" id="profile-result" aria-live="polite"></p>
+            </section>
+
+            <div class="page-controls">
+                <button class="secondary-button nav-link" type="button" data-page="mongol-invasions">← Mongol Invasions</button>
+                <button class="primary-button nav-link" type="button" data-page="mini-game">Next: Mini-Game →</button>
+            </div>
+        </section>
+
+        <!-- MINI-GAME PAGE -->
+        <section class="page" id="mini-game" aria-labelledby="game-title" hidden>
+            <div class="page-banner game-banner">
+                <div>
+                    <p class="eyebrow">Educational Mini-Game</p>
+                    <h1 id="game-title">Defend Hakata Bay</h1>
+                    <p>
+                        Make historically informed decisions. Balance defence, supplies and
+                        morale across four rounds.
+                    </p>
+                </div>
+                <div class="banner-symbol" aria-hidden="true">守</div>
+            </div>
+
+            <section class="game-shell">
+                <div class="game-intro" id="game-intro">
+                    <div class="samurai-sprite idle" id="samurai-sprite" role="img"
+                        aria-label="Blue samurai game sprite"></div>
+                    <div>
+                        <p class="eyebrow">Your mission</p>
+                        <h2>Prepare the coast for invasion</h2>
+                        <p>
+                            Each choice changes your three resources. Explanations reveal why
+                            a decision may help or harm the defence.
+                        </p>
+                        <button class="primary-button" id="start-game" type="button">Start Game</button>
+                    </div>
+                </div>
+
+                <div class="game-board" id="game-board" hidden>
+                    <div class="game-topbar">
+                        <div>
+                            <span>Round</span>
+                            <strong><span id="round-number">1</span>/4</strong>
+                        </div>
+                        <div class="countdown">
+                            <span>Decision time</span>
+                            <strong id="countdown-number">20</strong>
+                        </div>
+                    </div>
+
+                    <div class="battle-scene" id="battle-scene" aria-hidden="true">
+                        <div class="samurai-sprite idle" id="battle-samurai"></div>
+                        <div class="moving-ship" id="moving-ship">
+                            <span class="sail"></span>
+                            <span class="hull"></span>
+                        </div>
+                    </div>
+
+                    <div class="stats-grid">
+                        <div class="stat">
+                            <div><span>Defence</span><strong id="defence-value">70</strong></div>
+                            <div class="stat-track"><span id="defence-bar"></span></div>
+                        </div>
+                        <div class="stat">
+                            <div><span>Supplies</span><strong id="supplies-value">70</strong></div>
+                            <div class="stat-track"><span id="supplies-bar"></span></div>
+                        </div>
+                        <div class="stat">
+                            <div><span>Morale</span><strong id="morale-value">70</strong></div>
+                            <div class="stat-track"><span id="morale-bar"></span></div>
+                        </div>
+                    </div>
+
+                    <article class="scenario-card">
+                        <p class="scenario-label" id="scenario-label">Round 1 · Preparation</p>
+                        <h2 id="scenario-title">A second invasion is expected</h2>
+                        <p id="scenario-text">
+                            Officials plan a stone defensive wall near Hakata Bay. What should receive priority?
+                        </p>
+                        <div class="choice-list" id="choice-list"></div>
+                        <div class="feedback-box" id="feedback-box" aria-live="polite"></div>
+                    </article>
+                </div>
+
+                <div class="result-panel" id="result-panel" hidden>
+                    <div class="samurai-sprite victory" aria-hidden="true"></div>
+                    <p class="eyebrow">Campaign complete</p>
+                    <h2 id="result-title">The coast holds!</h2>
+                    <p id="result-message"></p>
+                    <p class="final-score">Final score: <strong id="final-score">0</strong>/300</p>
+                    <button class="primary-button" id="reset-game" type="button">Play Again</button>
+                </div>
+            </section>
+
+            <div class="page-controls">
+                <button class="secondary-button nav-link" type="button" data-page="life-during">← Life During War</button>
+                <button class="secondary-button" id="reset-app" type="button">Reset Entire App</button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>Kamakura Under Siege · Educational Web Development Assignment</p>
+        <p>Historical overview based on museum and educational reference material.</p>
+    </footer>
+
+    <audio id="click-audio" src="audio/click.wav" preload="auto"></audio>
+    <audio id="correct-audio" src="audio/correct.wav" preload="auto"></audio>
+    <audio id="wrong-audio" src="audio/wrong.wav" preload="auto"></audio>
+</body>
+</html>
